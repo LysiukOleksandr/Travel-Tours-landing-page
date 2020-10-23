@@ -9,9 +9,60 @@
 </head>
 <body>
   
+  <header class="header">
+    <div class="container">
+      <div class="header__top">
+         <div class="logo"><a href="#">
+          <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20.5" cy="20.5" r="20.5" fill="#1ABE84"/>
+            <circle cx="20.5" cy="20.5" r="9" fill="#FB8F1D" stroke="white" stroke-width="3"/>
+            </svg>
+         </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Partner</a></li>
+          </ul>
+        </nav>
+        <div class="header__flex">
+          <button class="header__login">Login</button>
+          <button class="header__register">Register</button>
+        </div>
+      </div>
+      <div class="header__content">
+        <h1 class="header__title">Explore and Travel</h1>
+        <p class="header__subtitle">Holiday finder</p>
+        <form class="header__form">
+          <select class='header__form-location header__form-item'>
+            <option value="Malta">Malta</option>
+            <option value="Miami">Miami</option>
+            <option value="Cappadocia">Cappadocia</option>
+          </select>
+          <select class='header__form-activity header__form-item'>
+            <option value="item">Text</option>
+            <option value="item">Text</option>
+            <option value="item">Text</option>
+          </select>
+          <select class='header__form-grade header__form-item'>
+            <option value="item">Text</option>
+            <option value="item">Text</option>
+            <option value="item">Text</option>
+          </select>
+          <select class='header__form-date header__form-item'>
+            <option value="item">Text</option>
+            <option value="item">Text</option>
+            <option value="item">Text</option>
+          </select>
+          <button class="header__form-submit" type="submit">Explore</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
