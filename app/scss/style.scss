@@ -386,6 +386,9 @@ select {
   @media screen and(max-width:768px) {
     padding-top: 150px;
   }
+  @media screen and(max-width:340px) {
+    padding-top: 50px;
+  }
   &__wrapper {
     padding-bottom: 50px;
     background: url('../img/circle.svg') no-repeat 70% 0%,
@@ -486,6 +489,62 @@ select {
       font-weight: 400;
       line-height: 25px;
       color: #7d7987;
+    }
+  }
+}
+
+// guides
+
+.guides {
+  &__wrapper {
+    padding: 240px 60px 100px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('../img/cross.svg') no-repeat 40% 78%,
+      url('../img/circle.svg') no-repeat 10% 35%;
+    @media screen and(max-width:768px) {
+      flex-direction: column-reverse;
+      background: url('../img/cross.svg') no-repeat 70% 90%,
+        url('../img/circle.svg') no-repeat 10% 35%;
+      padding-top: 150px;
+    }
+    @media screen and(max-width:500px) {
+      padding: 150px 10px 100px 10px;
+    }
+    @media screen and(max-width:340px) {
+      padding-top: 50px;
+    }
+  }
+  &__content {
+    margin-right: 20px;
+    @media screen and(max-width:500px) {
+      margin: 0;
+    }
+  }
+  &__title {
+    @media screen and(max-width:768px) {
+      margin-top: 20px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 20px;
+  }
+
+  &__button {
+    margin-top: 30px;
+    margin-left: 0;
+    @media screen and(max-width:500px) {
+      margin: 30px auto 0 auto;
+    }
+  }
+  &__img {
+    max-width: 650px;
+    height: auto;
+    img {
+      height: auto;
+      max-width: 100%;
     }
   }
 }
