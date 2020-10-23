@@ -80,6 +80,11 @@ button {
           }
         }
 
+        &:active {
+          transform: translateY(2px);
+          transition: 0.1s;
+        }
+
         a {
           color: #b8becd;
           &:focus {
