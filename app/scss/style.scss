@@ -36,6 +36,7 @@ button {
 .logo {
   justify-self: center;
   align-self: center;
+  margin-left: 5px;
 }
 
 .button {
@@ -51,13 +52,45 @@ button {
     align-items: center;
     column-gap: 10px;
     padding-top: 45px;
+    position: relative;
+    @media screen and(max-width:450px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+    }
   }
 
   &__nav {
+    @media screen and(max-width:450px) {
+      order: 3;
+    }
     &-menu {
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      @media screen and(max-width:768px) {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $green;
+        justify-content: space-around;
+        transform: scale(0);
+        transition: 0.5s;
+        border-radius: 50%;
+      }
+      @media screen and(max-width:450px) {
+        flex-direction: column;
+        height: 100%;
+        bottom: -100%;
+      }
+
+      &--open {
+        transition: 0.5s;
+        transform: scale(1);
+        border-radius: 0%;
+      }
+
       li {
         position: relative;
         margin: 0 17.5px;
@@ -90,20 +123,73 @@ button {
           &:focus {
             color: $black;
           }
+          @media screen and(max-width:768px) {
+            color: $white;
+          }
+        }
+      }
+    }
+    &-burger {
+      position: relative;
+      display: none;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      z-index: 10;
+      transition: 0.3s;
+      @media screen and(max-width:768px) {
+        display: block;
+      }
+      span {
+        @extend %burger;
+        &:before {
+          content: '';
+          @extend %burger;
+          transform: translateY(-7px);
+          transition: 0.3s;
+        }
+        &:after {
+          content: '';
+          @extend %burger;
+          transform: translateY(7px);
+          transition: 0.3s;
+        }
+      }
+
+      &--active {
+        span {
+          height: 0;
+          &:before {
+            transform: translateY(0px) rotate(45deg);
+            transition: 0.3s;
+          }
+          &:after {
+            transform: translateY(0px) rotate(-45deg);
+            transition: 0.3s;
+          }
         }
       }
     }
   }
   &__flex {
     display: flex;
+    @media screen and(max-width:450px) {
+      justify-content: center;
+    }
   }
   &__login {
     @extend %button;
     margin: 0 10px;
     color: $orange;
+    @media screen and(max-width:768px) {
+      margin: 0 5px;
+    }
   }
   &__register {
     margin: 0 10px;
+    @media screen and(max-width:768px) {
+      margin: 0 5px;
+    }
   }
   &__content {
   }
