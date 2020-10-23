@@ -716,6 +716,113 @@ select {
   }
 }
 
+// testimonials
+
+.stories {
+  &__wrapper {
+    padding: 240px 60px 100px 60px;
+    background: url('../img/cross.svg') no-repeat 40% 10%,
+      url('../img/circle.svg') no-repeat 65% 90%;
+    @media screen and(max-width:768px) {
+      padding-top: 150px;
+      background: url('../img/cross.svg') no-repeat 40% 5%,
+        url('../img/circle.svg') no-repeat 65% 95%;
+    }
+    @media screen and(max-width:500px) {
+      padding: 150px 10px 100px 10px;
+    }
+    @media screen and(max-width:340px) {
+      padding-top: 50px;
+    }
+  }
+  &__title {
+    margin-left: 105px;
+    @media screen and(max-width:768px) {
+      margin-left: 50px;
+    }
+    @media screen and(max-width:500px) {
+      margin: 0;
+    }
+  }
+  &__content {
+    margin-top: 56px;
+    position: relative;
+    max-width: 1200px;
+    margin: 55px auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
+    justify-content: center;
+    column-gap: 25px;
+    row-gap: 25px;
+    margin-bottom: 40px;
+    @media screen and(max-width:1240px) {
+      max-width: 800px;
+    }
+  }
+
+  &__view-all {
+    position: absolute;
+    min-width: 80px;
+    top: -80px;
+    right: 100px;
+    color: $orange;
+    cursor: pointer;
+    svg {
+      margin-left: 10px;
+    }
+    &:hover {
+      svg {
+        animation: view-arrow 1s linear infinite;
+      }
+    }
+    @media screen and(max-width:1240px) {
+      right: 140px;
+    }
+    @media screen and(max-width:800px) {
+      top: -40px;
+    }
+    @media screen and(max-width:340px) {
+      right: 60px;
+    }
+  }
+  &__item {
+    overflow: hidden;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template: auto 1fr 1fr 1fr / 1fr;
+    &-title {
+      font-size: 17px;
+      line-height: 30px;
+      font-weight: 700;
+      padding-right: 10px;
+    }
+  }
+  &__img {
+    max-width: 260px;
+    height: 230px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  &__description {
+    padding-right: 10px;
+    font-size: 15px;
+    line-height: 26px;
+    color: #7d7987;
+  }
+  &__read-more {
+    justify-self: start;
+    align-self: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 28px;
+    color: $orange;
+  }
+}
+
 @keyframes view-arrow {
   0% {
     transform: translateX(0);
