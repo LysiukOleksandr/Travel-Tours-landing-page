@@ -3,3 +3,121 @@
 @import 'fonts';
 @import 'mixins';
 @import 'extends';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  background: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.container {
+  max-width: 1415px;
+  margin: 0 auto;
+}
+
+.logo {
+  justify-self: center;
+  align-self: center;
+}
+
+.button {
+  @extend %button;
+  margin: 0 10px;
+  background: $orange;
+}
+
+.header {
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr 6fr 2fr;
+    align-items: center;
+    column-gap: 10px;
+    padding-top: 45px;
+  }
+
+  &__nav {
+    &-menu {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      li {
+        position: relative;
+        margin: 0 17.5px;
+        font-size: 16px;
+        padding: 10px 0;
+        overflow: hidden;
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 0.5px;
+          background: $green;
+          transition: 0.4s;
+          transform: translateY(15px);
+        }
+        &:hover {
+          &:after {
+            transform: translateY(5px);
+          }
+        }
+
+        a {
+          color: #b8becd;
+          &:focus {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+  &__flex {
+    display: flex;
+  }
+  &__login {
+    @extend %button;
+    margin: 0 10px;
+    color: $orange;
+  }
+  &__register {
+    margin: 0 10px;
+  }
+  &__content {
+  }
+  &__title {
+  }
+  &__subtitle {
+  }
+  &__form {
+  }
+  &-location {
+    &-item {
+    }
+    &-activity {
+    }
+    &-grade {
+    }
+    &-date {
+    }
+    &-submit {
+    }
+  }
+}
