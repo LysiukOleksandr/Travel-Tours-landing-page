@@ -1,2 +1,2 @@
 ﻿# Travel-Tours-landing-page
-https://lysiukoleksandr.github.io/travelandtours.github.io/
+ https://lysiukoleksandr.github.io/travelandtours/
