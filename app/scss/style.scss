@@ -362,8 +362,6 @@ select {
       max-width: 100%;
     }
   }
-  &__title {
-  }
   &__subtitle {
     margin-top: 20px;
   }
@@ -820,6 +818,132 @@ select {
     font-weight: 600;
     line-height: 28px;
     color: $orange;
+  }
+}
+
+// footer
+
+.footer {
+  background: #f9f9fb;
+
+  &__wrapper {
+    padding: 70px 20px 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    column-gap: 15px;
+    @media screen and(max-width:900px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+    @media screen and(max-width:570px) {
+      grid-template-rows: repeat(4, 1fr) 150px;
+    }
+  }
+
+  &__info {
+    max-width: 390px;
+    @media screen and(max-width:900px) {
+      grid-column: 1/5;
+      text-align: center;
+      justify-self: center;
+    }
+    @media screen and(max-width:570px) {
+      grid-column: 1/5;
+    }
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+    font-family: Mulish, sans-serif;
+    color: #848484;
+    margin-top: 26px;
+  }
+  &__copyright {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+    font-family: Mulish, sans-serif;
+    color: #848484;
+    margin-top: 55px;
+    @media screen and(max-width:900px) {
+      margin-top: 20px;
+    }
+  }
+
+  &__destinations {
+    @media screen and(max-width:570px) {
+      text-align: center;
+      grid-column: 1/5;
+      grid-row: 2/3;
+    }
+  }
+
+  &__shop {
+    @media screen and(max-width:570px) {
+      text-align: center;
+      grid-column: 1/5;
+      grid-row: 3/4;
+    }
+  }
+
+  &__interests {
+    @media screen and(max-width:570px) {
+      text-align: center;
+      grid-column: 1/5;
+      grid-row: 4/5;
+    }
+  }
+
+  &__menu {
+    @media screen and(max-width:900px) {
+      justify-self: center;
+      padding-bottom: 20px;
+    }
+  }
+  &__title {
+    font-family: Mulish, sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 30px;
+    @media screen and(max-width:900px) {
+      margin-bottom: 10px;
+    }
+  }
+  &__list {
+    li {
+      margin: 5px 0;
+      a {
+        font-family: Mulish, sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 38px;
+        color: #848484;
+      }
+    }
+  }
+  &__networks {
+    padding-top: 30px;
+    grid-column: 1/5;
+    align-self: center;
+    text-align: center;
+    border-top: 0.6px solid #c4c4c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__link {
+    display: block;
+    margin: 0 12.5px;
+    svg {
+      width: 28px;
+      height: 20px;
+    }
+    &:hover {
+      transform: translateY(2px);
+    }
   }
 }
 
